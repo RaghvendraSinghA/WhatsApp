@@ -43,7 +43,7 @@ export const login= async(req,res)=>{
         if(!userData){
             return res.json({success:false, message:"User doesn't exist"})
         }
-
+        console.log('changed')
         const isPasswordCorrect=await bcrypt.compare(password,userData.password)
 
         if(!isPasswordCorrect){
